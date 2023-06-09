@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const blurhash = require('./blurhash');
+const thumbhash = require("./thumbhash");
 
 module.exports = {
-  blurhash,
+  thumbhash,
 };
