@@ -1,6 +1,6 @@
 {
   "name": "strapi-thumbhash",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A plugin that generates thumbhash for your uploaded images",
   "strapi": {
     "name": "strapi-thumbhash",
@@ -8,15 +8,14 @@
     "kind": "plugin",
     "displayName": "Strapi ThumbHash"
   },
-  "dependencies": {
-    "jpeg-js": "^0.4.4",
-    "thumbhash": "0.1.1"
-  },
-  "peerDependencies": {
-    "@strapi/strapi": "^4.0.0"
-  },
+  "files": [
+    "server",
+    "strapi-server.js",
+    "thumbhashLoader.js"
+  ],
+  "types": "src/types.d.ts",
   "author": {
-    "name": "Cortopy",
+    "name": "cortopy",
     "url": "https://github.com/cortopy"
   },
   "maintainers": [
@@ -25,9 +24,21 @@
       "url": "https://github.com/cortopy"
     }
   ],
-  "engines": {
-    "node": ">=14.19.1 <=18.x.x",
-    "npm": ">=6.0.0"
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "develop": "tsc --watch"
   },
-  "license": "MIT"
+  "dependencies": {
+    "canvas": "2.11.2",
+    "sharp": "^0.32.1",
+    "thumbhash": "0.1.1"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^4.0.0"
+  },
+  "devDependencies": {
+    "@strapi/strapi": "^4.11.0",
+    "typescript": "5.1.3"
+  }
 }
